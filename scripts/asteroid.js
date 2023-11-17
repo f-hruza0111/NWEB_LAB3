@@ -215,12 +215,18 @@ function generateAsteroids(n = genNumOfAsteroids){
         const maxX = gameCanvas.canvas.width + dimension
         const minX = -dimension
 
+
         var x = Math.ceil(Math.random() * (maxX - minX) + minX) 
         // var y = Math.ceil(Math.random() * 2) % 2 == 0 ?  -dimension: gameCanvas.canvas.height  + dimension 
         
         var y = Math.ceil(Math.random() * 2) % 2 == 0 ?  -dimension: gameCanvas.canvas.height  + dimension
 
-        
+        if(x === minX || x == maxX ){
+
+            const maxY = gameCanvas.canvas.height + dimension
+            const minY = -dimension
+            y = Math.ceil(Math.random() * (maxY - minY) + minY) 
+        }
        
         
 
